@@ -1,0 +1,58 @@
+<%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/header') %>
+
+
+
+            <%- include('partials/dataTable') %>
+
+
+                <form action="/" method="POST" class="allTables singleTable searchForTable">
+                    Search for table name: <input type="text" name="table_name">
+                    <button type="submit">Get Table</button>
+                </form>
+
+                <section class="addingToDatabase">
+                    <section>
+                        <h3>Add new student:</h3>
+                        <form action="/addStudent" method="POST" class="form">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" required><br>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" required><br>
+                            <label for="town">Town:</label>
+                            <input type="text" id="town" name="town" required><br>
+                            <button type="submit">Add Student</button>
+                        </form>
+                    </section>
+
+                    <section>
+                        <h3>Add new course:</h3>
+                        <form action="/addCourse" method="POST" class="form">
+                            <label for="courseName">Course name:</label>
+                            <input type="text" id="courseName" name="courseName" required><br>
+                            <label for="courseDescription">Course description:</label>
+                            <input type="text" id="courseDescription" name="courseDescription" required><br>
+                            <button type="submit">Add Course</button>
+                        </form>
+                    </section>
+
+                    <section>
+                        <h3>Add student to a course:</h3>
+                        <form action="/addRelation" method="POST" class="form">
+                            <label for="studentId">Student Id (number):</label>
+                            <input type="text" id="studentId" name="studentId" required><br>
+                            <label for="courseId">Course Id (number):</label>
+                            <input type="text" id="courseId" name="courseId" required><br>
+                            <button type="submit">Add Student to course</button>
+                        </form>
+                    </section>
+                </section>
+
+
+                <%- include('partials/footer') %>
+    </body>
+
+    </html>

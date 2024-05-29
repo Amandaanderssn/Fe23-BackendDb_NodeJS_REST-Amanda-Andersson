@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+
+    <body>
+        <%- include('partials/header') %>
+
+
+            <p class="removeDataHeading">
+                <%= pageTitle; %>
+            </p>
+
+            <form action="/removeData" method="POST" class="searchForTable">
+                Write id to be remove: <input type="text" name="id">
+                <button type="submit">Remove row</button>
+            </form>
+
+            <%- include('partials/dataTable') %>
+
+                <%- include('partials/footer') %>
+    </body>
+
+    </html>

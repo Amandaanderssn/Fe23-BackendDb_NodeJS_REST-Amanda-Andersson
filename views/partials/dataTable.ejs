@@ -1,0 +1,19 @@
+<% if(typeof dbData !='undefined' ){%>
+    <table class="allTables">
+        <% Object.keys(dbData[0]).forEach( header=> {%>
+            <th class="tableHeading">
+                Tables from : <%= header; %>
+
+            </th>
+            <% }); %>
+                <% dbData.forEach( row=> {%>
+                    <tr>
+                        <% Object.values(row).forEach( value=> {%>
+                            <td class="singleTable">
+                                <%= value; %>
+                            </td>
+                            <% }); %>
+                    </tr>
+                    <% }); %>
+    </table>
+    <% } %>
